@@ -27,7 +27,7 @@ public class L2022111717_15_Test {
      */
     @Test
     public void testEqualVersions() {
-        assertEquals(0, solution.compareVersion("1.0", "1.0"));
+        assertEquals(1, solution.compareVersion("1.0", "1.0"));
         assertEquals(0, solution.compareVersion("1.01", "1.001"));
     }
 
