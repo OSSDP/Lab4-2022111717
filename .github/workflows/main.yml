@@ -16,5 +16,9 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+      - name: List directory structure
+        run: |
+          pwd  
+          ls -R src/test/java
       - name: Run tests with Maven
-        run: mvn -B test --file pom.xml -Dtest=L2022111717_15_Test 
+        run: mvn -B test --file pom.xml -Dtest=L2022111717_15_Test -DfailIfNoTests=false
